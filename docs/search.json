@@ -2,23 +2,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "rodreras.github.io",
+    "title": "GeoBlog",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 22, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 19, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Installing ModelMuse/Modflow on Linux\n\n\n\n\n\n\nlinux\n\n\nhydrogeology\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 22, 2024\n\n\nRodrigo Brust Santos\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\nRodrigo Brust Santos\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/linux-modflow/index.html",
+    "href": "posts/linux-modflow/index.html",
+    "title": "Installing ModelMuse/Modflow on Linux",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "When I started transitioning from W10 to Pop_OS! (Ubuntu-based), I got a new remote internship at a hydrogeological consulting company.\nFrom day one, I was willing to learn how to model aquifers and everything related to water modeling. I knew the company wouldn’t send me a working station, but I had to find a way of installing MODFLOW on my Pop_OS!\nThe very first things you have to know is:\n\nThere are MODFLOW binaries compiled for Linux, developed by USGS Team;\nModelMuse is free and open-source software;\n\nYou can say to me:\n\n“But bro, if you’re using Linux and have the binaries, you can just use FloPy!”\n\nYep, I do agree with you. But the main point is: learning how to operate is better when you have a graphic interface. For example, it’s easier to learn how to work with spatial data using QGIS and then switch to PyQGIS or even Python + GDAL.\n\nInstallation\nIn total, we’re going to download 3 packages: MODFLOW binaries, ModelMuse5 and Wine.\nFor those that don’t know what Wine is, you can check it here.\nDespite being open-source, Model Muse doesn’t have a version for Linux OS. That’s why Wine is the workaround.\n\n\nDownload MODFLOW Binaries\nThis is the easiest part. Download the zip file with the Linux binaries from this USGS GitHub repository. Place it in your Documents folder under the name of MODFLOW/src.\n\n\n\nInstalling Wine\nVisit Wine Download Page, choose your Linux distro-base. In my case, as I said before, I used Pop_OS! Ubuntu-based.\nThen, all the install instructions will appear. Follow it until the end according to your distro. Below are the codes for installing Wine on my machine Ubuntu-based 21.10. Make sure to check your systems configurations.\nsudo dpkg --add-architecture i386wget \n-nc https://dl.winehq.org/wine-builds/winehq.key\nsudo apt-key add winehq.key\nsudo add-apt-repository ‘deb https://dl.winehq.org/wine-builds/ubuntu/ impish main’\nsudo apt update\nsudo apt install --install-recommends winehq-stable\n\n\nDownloading ModelMuse5\nModelMuse5 has just been released. Let’s download its stable version from the USGS website. In my case, I have to download the 64-bit installer.\nAfter downloading the .exe, you must click with the mouse’s right button, then go to Open With Another App &gt; Apps Windows Wine. Then hit Select.\n\nWine will pop up a window. It might ask you to download a few extra packages. Hit yes.\nIn a few moments, an installation window will appear:\n\nClick “Next” until the “Install” button appears. Hit it!\nBingo!\n\nThen I opened a project that I had on my external hard drive. It opens smoothly. Sometimes the program might crash or rise bugs due to the emulator since originally it was compiled for Windows.\n\n\n\nConfiguring your ModelMuse and MODFLOW Binaries\nOnce you have your ModelMuse open, go to Model &gt; MODFLOW Program Locations. Another window will appear. Select each binary you want to load into your ModelMuse and select the path from your ~/Documents/MODFLOW/src.\nAll fields in red are required! After setting the path, just click “OK” and everything is ready to go.\n\nThat’s it. Now you can start your aquifer modeling on your Linux computer. Enjoy!"
   },
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nIn here I plan to put some of my contribuitions, publications and tutorials! Hope you like it!"
   },
   {
     "objectID": "about.html",

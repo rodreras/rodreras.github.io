@@ -3,17 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "rodreras.github.io"
+  title: "GeoBlog"
   navbar:
     right:
-      - about.qmd
+      - icon: house-door-fill
+        href: https://rodrigobrust.com
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/rodreras
+      - icon: linkedin
+        href: https://linkedin.com/rodrigobrust
 format:
   html:
-    theme: cosmo
+    theme: sandstone
     css: styles.css
 
 

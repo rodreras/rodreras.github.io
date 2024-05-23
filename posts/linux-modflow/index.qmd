@@ -1,0 +1,93 @@
+---
+title: "Installing ModelMuse/Modflow on Linux"
+author: "Rodrigo Brust Santos"
+date: "2024-05-22"
+categories: [linux, hydrogeology, analysis]
+image: "image.jpg"
+---
+
+When I started transitioning from W10 to Pop_OS! (Ubuntu-based), I got a new remote internship at a hydrogeological consulting company.
+
+From day one, I was willing to learn how to model aquifers and everything related to water modeling. I knew the company wouldn’t send me a working station, but I had to find a way of installing MODFLOW on my Pop_OS!
+
+The very first things you have to know is:
+
+- There are MODFLOW binaries compiled for Linux, developed by USGS Team;
+
+- ModelMuse is free and open-source software;
+
+You can say to me:
+
+> “But bro, if you’re using Linux and have the binaries, you can just use FloPy!”
+
+Yep, I do agree with you. But the main point is: learning how to operate is better when you have a graphic interface. For example, it’s easier to learn how to work with spatial data using QGIS and then switch to PyQGIS or even Python + GDAL.
+
+
+### Installation
+
+In total, we’re going to download 3 packages: **MODFLOW binaries**, **ModelMuse5** and **Wine**.
+
+For those that don’t know what Wine is, you can check it [here](https://www.winehq.org/).
+
+Despite being open-source, Model Muse doesn’t have a version for Linux OS. That’s why Wine is the workaround.
+
+
+### Download MODFLOW Binaries
+
+This is the easiest part. Download the zip file with the Linux binaries from [this USGS GitHub repository](https://github.com/MODFLOW-USGS/executables). Place it in your Documents folder under the name of MODFLOW/src.
+
+![](./images/modflow1.jpeg)
+
+### Installing Wine
+
+Visit [Wine Download Page](https://wiki.winehq.org/Download), choose your Linux distro-base. In my case, as I said before, I used Pop_OS! Ubuntu-based.
+
+Then, all the install instructions will appear. Follow it until the end according to your distro. Below are the codes for installing Wine on my machine Ubuntu-based 21.10. Make sure to check your systems configurations.
+
+```bash 
+sudo dpkg --add-architecture i386wget 
+-nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+sudo add-apt-repository ‘deb https://dl.winehq.org/wine-builds/ubuntu/ impish main’
+sudo apt update
+sudo apt install --install-recommends winehq-stable
+```
+
+
+### Downloading ModelMuse5
+
+ModelMuse5 has just been released. Let’s download its stable version from the USGS website. In my case, I have to download the 64-bit installer.
+
+After downloading the .exe, you must click with the mouse’s right button, then go to Open With Another App > Apps Windows Wine. Then hit Select.
+
+![](./images/modflow2.jpeg)
+
+Wine will pop up a window. It might ask you to download a few extra packages. Hit yes.
+
+In a few moments, an installation window will appear:
+
+![](./images/modflow3.jpeg)
+
+Click “Next” until the “Install” button appears. Hit it!
+
+**Bingo!**
+
+![](./images/modflow4.jpeg)
+
+Then I opened a project that I had on my external hard drive. It opens smoothly. Sometimes the program might crash or rise bugs due to the emulator since originally it was compiled for Windows.
+
+
+![](./images/modflow5.jpeg)
+
+### Configuring your ModelMuse and MODFLOW Binaries
+
+Once you have your ModelMuse open, go to Model > MODFLOW Program Locations. Another window will appear. Select each binary you want to load into your ModelMuse and select the path from your ~/Documents/MODFLOW/src.
+
+All fields in red are required! After setting the path, just click “OK” and everything is ready to go.
+
+![](./images/modlfow6.jpeg)
+
+That’s it. Now you can start your aquifer modeling on your Linux computer. Enjoy!
+
+
+
