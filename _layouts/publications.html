@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<main class="project-page">
+  <div class="container">
+    <h1 class="hero-title" style="font-size:clamp(1.8rem,4vw,3rem);margin-bottom:3rem;">Publications</h1>
+
+    {% for pub in page.publications %}
+    <div class="pub-item">
+      <span class="pub-year">{{ pub.year }}</span>
+      <div class="pub-body">
+        <p class="pub-type">{{ pub.type }}</p>
+        <h2 class="pub-title">{{ pub.title }}</h2>
+        <p class="pub-meta">{{ pub.authors }}</p>
+        {% if pub.venue %}<p class="pub-venue">{{ pub.venue }}</p>{% endif %}
+        <div class="pub-links">
+          {% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF →</a>{% endif %}
+          {% if pub.doi %}<a href="{{ pub.doi }}" target="_blank" rel="noopener">DOI →</a>{% endif %}
+          {% if pub.github %}<a href="{{ pub.github }}" target="_blank" rel="noopener">Code →</a>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</main>

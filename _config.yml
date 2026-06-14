@@ -1,0 +1,34 @@
+title: Rodrigo Brust
+description: Geodata Scientist — Remote sensing, geospatial analysis, Python.
+url: "https://rodrigobrust.com"
+baseurl: ""
+
+author:
+  name: Rodrigo Brust
+  email: rodrigobrustbsb@gmail.com
+  github: rodreras
+  linkedin: rodrigobrust
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - DEPLOYMENT.md
+  - node_modules
+  - vendor

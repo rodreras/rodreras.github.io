@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Morphological Mathematics & Tree Structures — Rodrigo Brust</title>
+  <meta name="description" content="Master's thesis. Novel Estimated Slope attribute for pattern spectra on component trees. NumPy/SciPy, Higra-compatible implementation."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+<body>
+  <main class="project-page">
+  <div class="container">
+    <a class="project-page-back" href="/#projects">← back</a>
+
+    <p class="project-page-tag">Research · Computer Vision</p>
+    <h1 class="project-page-title">Morphological Mathematics & Tree Structures</h1>
+    <p class="project-page-desc">Master's thesis. Novel Estimated Slope attribute for pattern spectra on component trees. NumPy/SciPy, Higra-compatible implementation.</p>
+
+    <div class="project-page-meta">
+      
+      <div class="project-page-meta-item">
+        <label>Year</label>
+        <span>2024–present</span>
+      </div>
+      
+      
+      <div class="project-page-meta-item">
+        <label>Role</label>
+        <span>Researcher / Author</span>
+      </div>
+      
+      
+      <div class="project-page-meta-item">
+        <label>Stack</label>
+        <span>Python · NumPy · SciPy · Higra</span>
+      </div>
+      
+    </div>
+
+    
+
+    <div class="project-page-body">
+      <h2 id="overview">Overview</h2>
+
+<p>Master’s thesis in computer vision at the University of Porto. The research introduces a new attribute — <strong>Estimated Slope</strong> — for pattern spectra computed on component trees (max-trees, min-trees, alpha-trees).</p>
+
+<h2 id="background">Background</h2>
+
+<p>Component trees are hierarchical image representations that capture connected components at every intensity threshold. Pattern spectra summarise the distribution of an attribute (e.g. area, compactness) across tree nodes, enabling multi-scale shape description without explicit segmentation.</p>
+
+<p>Existing attributes (area, volume, extent) describe static geometric properties of each component. The Estimated Slope attribute instead captures the <em>rate of change</em> of a shape descriptor as the threshold varies — encoding how quickly components merge or split through the hierarchy.</p>
+
+<h2 id="contribution">Contribution</h2>
+
+<ul>
+  <li>Formal definition of the Estimated Slope attribute within the component tree framework</li>
+  <li>Proof of anti-extensivity and other algebraic properties relevant to pattern spectra</li>
+  <li>Efficient NumPy/SciPy implementation compatible with the <a href="https://higra.readthedocs.io/">Higra</a> C++/Python library</li>
+  <li>Evaluation on texture discrimination and remote sensing segmentation benchmarks</li>
+</ul>
+
+<h2 id="status">Status</h2>
+
+<p>Ongoing. Implementation complete, experiments in progress.</p>
+
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Rodrigo Brust · <a href="https://github.com/rodreras" target="_blank" rel="noopener">rodreras</a></p>
+    </div>
+  </footer>
+</body>
+</html>

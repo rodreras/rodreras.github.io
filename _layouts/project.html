@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<main class="project-page">
+  <div class="container">
+    <a class="project-page-back" href="{{ '/' | relative_url }}#projects">← back</a>
+
+    <p class="project-page-tag">{{ page.tag }}</p>
+    <h1 class="project-page-title">{{ page.title }}</h1>
+    <p class="project-page-desc">{{ page.description }}</p>
+
+    <div class="project-page-meta">
+      {% if page.year %}
+      <div class="project-page-meta-item">
+        <label>Year</label>
+        <span>{{ page.year }}</span>
+      </div>
+      {% endif %}
+      {% if page.role %}
+      <div class="project-page-meta-item">
+        <label>Role</label>
+        <span>{{ page.role }}</span>
+      </div>
+      {% endif %}
+      {% if page.stack %}
+      <div class="project-page-meta-item">
+        <label>Stack</label>
+        <span>{{ page.stack | join: ' · ' }}</span>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if page.github or page.demo %}
+    <div class="project-page-links">
+      {% if page.github %}<a href="{{ page.github }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
+      {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noopener">Live demo →</a>{% endif %}
+    </div>
+    {% endif %}
+
+    <div class="project-page-body">
+      {{ content }}
+    </div>
+  </div>
+</main>
