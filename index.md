@@ -24,7 +24,7 @@ title: Home
           <span>·</span>
           <a href="#courses">Courses</a>
           <span>·</span>
-          <a href="/assets/files/rodrigo-brust-cv.pdf" target="_blank">CV</a>
+          <a href="/assets/cv/rodrigo-brust-cv.pdf" target="_blank">CV</a>
     </div>
   </div>
   <div class="hero-hint" aria-hidden="true">move cursor to reveal satellite view</div>
