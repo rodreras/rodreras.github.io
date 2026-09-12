@@ -254,7 +254,7 @@ def run(url: str, parquet_path: Path, map_path: Path) -> gpd.GeoDataFrame:
 
 Pointing it at Planet's Nepal catalog root gives 19 footprints (5 pre-event, 14 post-event) and this map:
 
-![alt text](../assets/images/satellite_duckdb_02.png)
+![alt text](/assets/images/satellite_duckdb_02.png)
 
 The cyan footprints are the 27 May PlanetScope baseline, the purple ones are the 26 Aug same-day PlanetScope pass, and the tight magenta cluster is the 27 Aug SkySat/Pelican tasking; visibly much smaller and much more tightly targeted on the actual river corridor, which lines up with the sub-metre `gsd` we saw in the query above.
 
@@ -266,7 +266,7 @@ Planet isn't the only open feed with eyes on this event. Vantor (Maxar's open di
 python sql/planet_nepal/get_planet_stac_data.py  # URL swapped to the Vantor collection
 ```
 
-![alt text](../assets/images/satellite_duckdb_02.png)
+![alt text](/assets/images/satellite_duckdb_02.png)
 
 This is a good example of why "classify by lineage, fall back to date" isn't a nicety but a necessity: Vantor's collection has no `pre-event`/`post-event` sub-folders to inherit a phase from, and its description spells the date out as "August 26, 2026" instead of the `26 Aug 2026` / ISO forms the date-parser recognizes, so every footprint falls through to `unknown` phase, and  the plotting code automatically drops into its date-colored fallback instead. It also surfaces something Planet's curated release doesn't show: Vantor's archive reaches back to **16 October 2021**, and that oldest footprint is a wide swath sitting mostly *west* of the flood corridor, leftover coverage from an unrelated earlier tasking, not disaster response. It's a reminder that a raw provider bucket is an archive, not a curated crisis package, and a real pipeline has to filter for relevance itself rather than trust that everything returned is on-topic.
 

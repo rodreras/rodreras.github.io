@@ -217,7 +217,7 @@ Result:
 │ 2024-12-01    │ 27.034741784037557 |
 ``` 
 
-![alt text](../assets/images/asos_01.png)
+![alt text](/assets/images/asos_01.png)
 
 ## Count by month
 
@@ -270,14 +270,14 @@ And the result shows that the registers per month is quite consistent, and that 
 
 Simple thing, just add a point geometry and ready to display on QGIS.
 
-![alt text](../assets/images/asos_02.png)
+![alt text](/assets/images/asos_02.png)
 
 
 ## Finally, a concentration map of regions with biggest amount of registers
 
 We can see the amount of temperature registers are around the main cities by the shore, mainly in Sudeste.
 
-![alt text](../assets/images/asos_03.png)
+![alt text](/assets/images/asos_03.png)
 
 ## Sources & Inspiration
 
